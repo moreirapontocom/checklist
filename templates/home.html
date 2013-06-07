@@ -1,66 +1,110 @@
 <div class="row-fluid">
-	
+
 	<div class="span3">
-		<div id="total-points">0</div>
-	</div>
-	
+		<span id="total-points">0</span> / {math equation="a + b + c + d + e + f" a=$basics|@count b=$accessibility|@count c=$css|@count d=$javascript|@count e=$seo|@count f=$performance|@count}
+	</div><!-- /.span3 -->
+
 	<div class="span9">
 
 		<h3>1 - Básicos</h3>
 		<ul class="unstyled">
 			{foreach from=$basics item=item name=count}
 				<li>
-					<span class="count">{$smarty.foreach.count.iteration}</span> - <input type="checkbox" class="check" /> {$item.label}
+					<table>
+						<tr>
+							<td><span class="count">{$smarty.foreach.count.iteration}</span> - </td>
+							<td><input type="checkbox" class="check" /> </td>
+							<td>{$item.label}</td>
+						</tr>
+					</table>
 				</li>
 			{/foreach}
 		</ul>
-		
+
 		<hr />
-		
+
 		<h3>2 - Acessibilidade</h3>
 		<ul class="unstyled">
 			{foreach from=$accessibility item=item name=count}
-				<li><span class="count">{$smarty.foreach.count.iteration}</span> - <input type="checkbox" class="check" /> {$item.label}</li>
+				<li>
+					<table>
+						<tr>
+							<td><span class="count">{$smarty.foreach.count.iteration}</span> - </td>
+							<td><input type="checkbox" class="check" /> </td>
+							<td>{$item.label}</td>
+						</tr>
+					</table>
+				</li>
 			{/foreach}
 		</ul>
-		
+
 		<hr />
-		
+
 		<h3>3 - CSS</h3>
 		<ul class="unstyled">
 			{foreach from=$css item=item name=count}
-				<li><span class="count">{$smarty.foreach.count.iteration}</span> - <input type="checkbox" class="check" /> {$item.label}</li>
+				<li>
+					<table>
+						<tr>
+							<td><span class="count">{$smarty.foreach.count.iteration}</span> - </td>
+							<td><input type="checkbox" class="check" /> </td>
+							<td>{$item.label}</td>
+						</tr>
+					</table>
+				</li>
 			{/foreach}
 		</ul>
-		
+
 		<hr />
-		
+
 		<h3>4 - Javascript</h3>
 		<ul class="unstyled">
 			{foreach from=$javascript item=item name=count}
-				<li><span class="count">{$smarty.foreach.count.iteration}</span> - <input type="checkbox" class="check" /> {$item.label}</li>
+				<li>
+					<table>
+						<tr>
+							<td><span class="count">{$smarty.foreach.count.iteration}</span> - </td>
+							<td><input type="checkbox" class="check" /> </td>
+							<td>{$item.label}</td>
+						</tr>
+					</table>
+				</li>
 			{/foreach}
 		</ul>
-		
+
 		<hr />
-		
+
 		<h3>5 - SEO</h3>
 		<ul class="unstyled">
 			{foreach from=$seo item=item name=count}
-				<li><span class="count">{$smarty.foreach.count.iteration}</span> - <input type="checkbox" class="check" /> {$item.label}</li>
+				<li>
+					<table>
+						<tr>
+							<td><span class="count">{$smarty.foreach.count.iteration}</span> - </td>
+							<td><input type="checkbox" class="check" /> </td>
+							<td>{$item.label}</td>
+						</tr>
+					</table>
+				</li>
 			{/foreach}
 		</ul>
-		
+
 		<hr />
-		
+
 		<h3>6 - Performance</h3>
 		<ul class="unstyled">
 			{foreach from=$performance item=item name=count}
-				<li><span class="count">{$smarty.foreach.count.iteration}</span> - <input type="checkbox" class="check" /> {$item.label}</li>
+				<li>
+					<table>
+						<tr>
+							<td><span class="count">{$smarty.foreach.count.iteration}</span> - </td>
+							<td><input type="checkbox" class="check" /> </td>
+							<td>{$item.label}</td>
+						</tr>
+					</table>
+				</li>
 			{/foreach}
 		</ul>
-		
-	</div>
-	
-</div>
 
+	</div><!-- /.span9 -->
+</div><!-- /.row-fluid -->
