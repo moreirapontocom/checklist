@@ -1,11 +1,55 @@
+<!-- {literal} -->
+	<style type="text/css">
+		body {position: relative;}
+		.column-left.affix {top: 41px;}
+		.column-left.affix-bottom {position: absolute;top: auto;bottom: 130px;}
+	</style>
+<!-- {/literal} -->
+
 <div class="row-fluid">
 
-	<div class="span3">
-		<span id="total-points">0</span> / {math equation="a + b + c + d + e + f" a=$basics|@count b=$accessibility|@count c=$css|@count d=$javascript|@count e=$seo|@count f=$performance|@count}
+	<div class="span3 column-left" style="width: 270px;" data-spy="affix" data-offset-top="182" data-offset-bottom="130">
+		
+		<div class="well text-center">
+			Total de pontos no checklist
+			<h2>
+				<span id="total-points" class="text-info">0</span> <span class="muted">/ {math equation="a + b + c + d + e + f" a=$basics|@count b=$accessibility|@count c=$css|@count d=$javascript|@count e=$seo|@count f=$performance|@count}</span>
+			</h2>
+		</div><!-- /.well -->
+		
+		<p>
+			<b>Compartilhe com seus amigos</b>
+		</p>
+		<!-- AddThis Button BEGIN -->
+		<!--{literal}-->
+		<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_compact"></a>
+			<a class="addthis_counter addthis_bubble_style"></a>
+		</div>
+		<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=moreirapontocom"></script>
+		<!--{/literal}-->
+		<!-- AddThis Button END -->
+
+		<hr />
+
+		<p>
+			Dá uma ajudinha aí! =D<br>
+			Ajude a manter o Checklist no ar.
+			<br>
+			<form method='post' action='https://www.moip.com.br/Process.do'>
+				<input type='hidden' name='method' value='donation'/>
+				<input type='hidden' name='donation_id' value='5663'/>
+				<input type='hidden' name='type' value='2'/>
+				<input type='image' name='submit' src='https://static.moip.com.br/imgs/buttons/bt_doar_c03_e04.png' alt='Manutenção do Checklist ' border='0' />
+			</form>
+		</p>
+
 	</div><!-- /.span3 -->
 
-	<div class="span9">
-
+	<div class="span9 pull-right">
 		<h3>1 - Básicos</h3>
 		<ul class="unstyled">
 			{foreach from=$basics item=item name=count}
@@ -105,6 +149,19 @@
 				</li>
 			{/foreach}
 		</ul>
+		
+		<hr>
+		
+		<div class="well">
+			<fieldset>
+				<legend>Resultado</legend>
 
+				<span class="label label-success">Bom</span> <span class="label label-warning">Médio</span> <span class="label label-important">Ruim</span> <b>Você marcou X pontos.</b>
+				
+				<br><br>
+				
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</fieldset>
+		</div>
 	</div><!-- /.span9 -->
 </div><!-- /.row-fluid -->

@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', -1);
 
 // Defines
-if ( $_SERVER['HTTP_HOST'] == 'localhostss' ) {
+if ( $_SERVER['HTTP_HOST'] == 'localhost' ) {
 	$include = $_SESSION['DOCUMENT_ROOT'] = 'D:\\Wamp\\www\\checklist';
 	$general_settings_file = $include.'\\core\\settings\\general.php';
 } else {
@@ -16,25 +16,7 @@ if ( !defined('DOCUMENT_ROOT') || !defined('GENERAL_SETTINGS_FILE') ) {
 	define('GENERAL_SETTINGS_FILE', $general_settings_file);
 } 
 
-// DB
-include_once(DOCUMENT_ROOT.'/core/library/adodb/adodb.inc.php');
-
-$db = ADONewConnection("mysql");
-$db->debug = false;
-$ADODB_CACHE_DIR = $_SERVER['DOCUMENT_ROOT'].'/cache';
-$db->cacheSecs = 3600 * 24; // cache 24 hours
-
-if ( $_SERVER['HTTP_HOST'] == 'localhost' ) {
-	$db->Connect("localhost","root","","pcg3");
-	$link = 'http://'.$_SERVER['HTTP_HOST'].'/';
-} else {
-	$db->Connect("localhost","root","","pcg3");
-	$link = 'http://'.$_SERVER['HTTP_HOST'].'/checklist/';
-}
-
-$db->Execute("set names 'utf8'");
-
-
+$link = 'http://'.$_SERVER['HTTP_HOST'].'/';
 
 $linkcache		= $link.'cache/';
 $linkcontent	= $link.'content/';

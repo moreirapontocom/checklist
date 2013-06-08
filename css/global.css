@@ -1,9 +1,9 @@
 body {padding-top: 60px;}
 
-img.fork-me {position: fixed; top: 0; right: 0; border: 0;z-index: 999999;}
-
 .count {display: inline-block;width: 18px;text-align: right;}
 input[type="checkbox"].check {display: inline-block;margin-top: -4px;margin-right: 5px;}
+
+.footer {margin-bottom: 50px;}
 
 @media (max-width: 979px) {}
 @media (max-width: 767px) {}

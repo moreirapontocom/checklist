@@ -51,16 +51,38 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="{$link}">Project name</a>
+				<a class="brand" href="{$link}">Checklist para Desenvolvimento Web</a>
 			</div>
 		</div>
 	</div>
 
     <div class="container">
-      {include file=$main_page_content}
+    	<p>
+			<b>O que é o Checklist?</b><br>
+			Todos nós, desenvolvedores, sabemos o quanto é complexo criar um software de qualidade, ainda mais com a quantidade enorme de plataformas, dispositivos e browsers.<br>
+			O Checklist é apenas uma lista de itens que devem ser observados antes de publicar qualquer trabalho feito para internet.<br>
+			Essa ferramenta auxilia e evita dores de cabeça com problemas e erros bobos que poderiam ter sido evitados.
+			<br><br>
+			Espero que seja <b>muito</b> útil!
+		</p>
+		
+		<hr>
+    	
+		{include file=$main_page_content}
     </div><!-- /container -->
 
-	<a href="https://github.com/moreirapontocom/checklist"><img class="fork-me" src="{$linkimg}fork-me.png" alt="Fork me on GitHub"></a>
+	<hr />
+
+	<div class="container footer">
+		<address>
+			Se <b>algum item importante não está na lista</b>, me fala lá no Twitter: <a href="http://twitter.com/moreirapontocom">@moreirapontocom</a>.<br>
+			Checklist está sob a licença <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons 3.0</a>.<br>
+			Desenvolvido por <a href="http://lucasmoreira.com.br/">Lucas Moreira</a>.<br>
+			Mantido por <a href="http://lucasmoreira.com.br/">Lucas Moreira</a>, <a href="http://marcotulio.org/">Marco Túlio</a>.<br>
+			O <a href="https://github.com/moreirapontocom/checklist">código-fonte</a> pode ser forkado lá do <a href="https://github.com/moreirapontocom">meu perfil no GitHub</a>.<br>
+			Desenvolvido com o <a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a>.
+		</address>
+	</div>
 
 	<script type="text/javascript" src="{$linklibrary}bootstrap/bootstrap-transition.js"></script>
 	<script type="text/javascript" src="{$linklibrary}bootstrap/bootstrap-alert.js"></script>
@@ -74,6 +96,7 @@
 	<script type="text/javascript" src="{$linklibrary}bootstrap/bootstrap-collapse.js"></script>
 	<script type="text/javascript" src="{$linklibrary}bootstrap/bootstrap-carousel.js"></script>
 	<script type="text/javascript" src="{$linklibrary}bootstrap/bootstrap-typeahead.js"></script>
+	<script type="text/javascript" src="{$linklibrary}bootstrap/bootstrap-affix.js"></script>
 	<script type="text/javascript" src="{$linklibrary}bootstrap/holder.js"></script>
 </body>
 </html>
